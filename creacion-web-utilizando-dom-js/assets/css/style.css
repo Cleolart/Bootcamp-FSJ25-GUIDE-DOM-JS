@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/*Custom for logo*/
+.logNex {
+    color: #ffb600;
+    font-size: 1.5em;
+}
+
+.logTech {
+    color: #0561c4;
+    font-size: 1.5em;
+}
+
+/*general css*/
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.h1,
+h1 {
+    font-size: 3em !important;
+    font-family: 'Bebas', sans-serif;
+    font-weight: 900;
+
+}
+
+.body {
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.btn-custom {
+    text-decoration: none !important;
+}
+
+/*This is the mode*/
+body.dark-mode {
+    background-color: #333;
+    color: white;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-dark {
+    background-color: #1f1f1f;
+
+}
+
+.dropdown-menu-dark .dropdown-item {
+    color: white;
+}
+
+.dropdown-menu-dark .dropdown-item:hover {
+    background-color: #666;
+    color: white;
+}
+
+/* Lith mode */
+body.light-mode {
+    background-color: white;
+    color: rgb(20, 20, 20);
+}
+
+.navbar-light-mode {
+    background-color: #f8f9fa;
+    color: rgb(20, 20, 20);
+}
+
+/*carosel*/
+
+.custom-carousel-container {
+    max-height: 100vh;
+    margin: 20px auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.custom-carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.custom-carousel-item {
+    min-width: 100%;
+    box-sizing: border-box;
+}
+
+.custom-carousel-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.custom-carousel-controls {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.custom-carousel-controls button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.custom-carousel-controls button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+/*About*/
+
+.about-text {
+    margin: 0 auto;
+    transition: max-height 0.5s ease;
+    overflow: hidden;
+}
+
+.about-text.collapsed {
+    max-height: 60px;
+}
+
+/*projects*/
+
+.project-item {
+    display: none;
+}
+
+.project-item.show {
+    display: block;
+}
+
+.card {
+    background: none !important;
+    border-color: #666 !important;
+
+}
+
+/*fORM*/
+
+.form-step {
+    display: none;
+}
+
+.form-step.active {
+    display: block;
+}
+
+.custom-button-group {
+    display: flex;
+    justify-content: space-between;
+}
+
+.btn-custom {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-custom:hover {
+    background-color: #0056b3;
+}
+
+/*up button*/
+#back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    display: none;
+    z-index: 99;
+}

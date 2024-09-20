@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexiusTech</title>
+    <link rel="shortcut icon" href="./assets/img/favicon.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="light-mode">
+    <div id="top"></div>
+
+    <!-- Navbar -->
+    <nav id="navbar" class="navbar navbar-expand-lg navbar-light-mode sticky-top">
+        <div class="container-fluid container">
+
+            <a class="navbar-brand" href="#top"><strong class="logNex">Nexius</strong><span
+                    class="logTech">Tech</span></a>
+
+            <!-- Mobile -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span id="navbar-toggler-icon" class="navbar-toggler-icon"></span>
+            </button>
+            <!-- Fin Mobile -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownTheme" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Accessibility
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownTheme">
+                            <li><a class="dropdown-item" href="javascript:void(0)"
+                                    onclick="changeBackground('dark')">Dark Mode</a></li>
+                            <li><a class="dropdown-item" href="javascript:void(0)"
+                                    onclick="changeBackground('light')">Light Mode</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contactUs" class="btn btn-warning">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- carousel -->
+    <section class="custom-carousel-container my-0 py-0">
+        <div class="custom-carousel-inner" id="customCarouselInner">
+            <div class="custom-carousel-item">
+                <img class="d-none d-lg-block" src="./assets/img/banner1.jpg" alt="Imagen 1">
+                <img class="d-m-none" src="./assets/img/banner1mobile.jpg" alt="Imagen 1">
+            </div>
+            <div class="custom-carousel-item">
+                <img class="d-none d-lg-block" src="./assets/img/banner2.jpg" alt="Imagen 2">
+                <img class="d-m-none" src="./assets/img/banner2mobile.jpg" alt="Imagen 2">
+            </div>
+            <div class="custom-carousel-item">
+                <img class="d-none d-lg-block" src="./assets/img/banner3.jpg" alt="Imagen 3">
+                <img class="d-m-none" src="./assets/img/banner3mobile.jpg" alt="Imagen 3">
+            </div>
+        </div>
+        <div class="custom-carousel-controls">
+            <button onclick="moveCustomCarousel(-1)">&#10094;</button>
+            <button onclick="moveCustomCarousel(1)">&#10095;</button>
+        </div>
+    </section>
+
+    <!-- About  -->
+    <section id="about" class="container mt-5">
+        <section  class="about-section py-5">
+            <div class="container text-center">
+                <h1 class="mb-4">About NexusTech</h1>
+                <h2>TEAM</h2>
+
+                <ul>
+                    <li>
+                        <strong>FSJ25</strong>
+                    </li>
+                    <li>
+                        Claudia Arely Lara Pineda
+                    </li>
+                    Jorge Alberto Pérez Campos
+                    </li>
+                    <li>
+                        Gustavo Eduardo Asencio Rivera
+                    </li>
+                </ul>
+
+
+                <p id="aboutText" class="about-text py-3">
+                    At NexusTech, we specialize in creating cutting-edge software solutions tailored to meet your
+                    business needs. Our team of expert developers is dedicated to innovation and quality, ensuring that
+                    every project not only meets but exceeds client expectations. From custom software development and
+                    web applications to advanced data analytics and cloud computing, we harness the latest technologies
+                    to drive your business forward.
+                    <span class="more-text">
+                        With a commitment to continuous improvement and a passion for technology, NexusTech stands out
+                        in a crowded industry by delivering bespoke solutions that are as unique as your business. We
+                        believe in a collaborative approach, working closely with clients to understand their challenges
+                        and deliver solutions that provide tangible results. Our expertise spans multiple industries,
+                        including finance, healthcare, and e-commerce, making us a versatile partner for any digital
+                        transformation journey.
+                    </span>
+                </p>
+                <button id="toggleButton" class="btn btn-secondary mt-3">Read More</button>
+            </div>
+        </section>
+
+    </section>
+
+    <!-- Our Projects -->
+    <section id="projects" class="projects-section py-5 my-5">
+        <div class="container text-center">
+            <h1 class="mb-4">Our Projects</h1>
+
+            <div class="d-flex justify-content-center mb-4">
+                <div class="btn-group d-none d-md-flex">
+                    <button class="btn btn-outline-primary filter-btn" data-filter="all">All</button>
+                    <button class="btn btn-outline-primary filter-btn" data-filter="web">Web Development</button>
+                    <button class="btn btn-outline-primary filter-btn" data-filter="mobile">Mobile Apps</button>
+                    <button class="btn btn-outline-primary filter-btn" data-filter="customDevelopment">custom
+                        Development</button>
+                </div>
+
+                <div class="dropdown d-md-none">
+                    <button class="btn btn-outline-primary dropdown-toggle" type="button" id="categoryDropdown"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Categories
+                    </button>
+                    <ul class="dropdown-menu" aria-labelledby="categoryDropdown">
+                        <li><a class="dropdown-item filter-btn" data-filter="all" href="javascript:void(0)">All</a></li>
+                        <li><a class="dropdown-item filter-btn" data-filter="web" href="javascript:void(0)">Web
+                                Development</a></li>
+                        <li><a class="dropdown-item filter-btn" data-filter="mobile" href="javascript:void(0)">Mobile
+                                Apps</a></li>
+                        <li><a class="dropdown-item filter-btn" data-filter="customDevelopment"
+                                href="javascript:void(0)">Custom Development</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row" id="projectContainer">
+                <div class="col-md-4 project-item" data-category="web">
+                    <div class="card">
+                        <img src="./assets/img/webPortfolio.jpg" class="card-img-top" alt="Web Development Project">
+                        <div class="card-body">
+                            <h5 class="card-title">Web Development Project</h5>
+                            <p class="card-text">A modern website built with the latest web technologies.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 project-item" data-category="mobile">
+                    <div class="card">
+                        <img src="./assets/img/appPortfolio.jpg" class="card-img-top" alt="Mobile App">
+                        <div class="card-body">
+                            <h5 class="card-title">Mobile App</h5>
+                            <p class="card-text">A cross-platform mobile app that enhances user engagement.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4 project-item" data-category="customDevelopment">
+                    <div class="card">
+                        <img src="./assets/img/customSystem.jpg" class="card-img-top" alt="Custom Development">
+                        <div class="card-body">
+                            <h5 class="card-title">Custom Development</h5>
+                            <p class="card-text">Custom Development to help businesses make data-driven decisions.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form -->
+    <section class="container my-5 py-5" id="contactUs">
+        <div class="container text-center">
+            <h1 class="mb-4">Formulario de Cotización</h1>
+        </div>
+        <div class="row d-flex flex-column flex-lg-row">
+
+            <!-- Formulario -->
+            <div class="col-lg-6">
+                <form class="p-3" id="quoteForm">
+                    <!-- Step 1 -->
+                    <div class="form-step active" id="step-1">
+                        <h4>Información Personal</h4>
+                        <div class="mb-3">
+                            <label>Nombre:</label>
+                            <input type="text" id="clientName" class="form-control" required>
+                        </div>
+                        <div class="mb-3">
+                            <label>Correo:</label>
+                            <input type="email" id="clientEmail" class="form-control" required>
+                        </div>
+                        <div class="custom-button-group">
+                            <button type="button" class="btn-custom" onclick="nextCustomStep()">Siguiente</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 2 -->
+                    <div class="form-step" id="step-2">
+                        <h4>Detalles del Sitio Web</h4>
+                        <div class="mb-3">
+                            <label>¿Cuenta con dominio?</label>
+                            <select id="hasDomain" class="form-select" required>
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label>¿Cuenta con hosting?</label>
+                            <select id="hasHosting" class="form-select" required>
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label>Tipo de Sitio Web:</label>
+                            <select id="siteType" class="form-select" required onchange="toggleCustomSiteOptions()">
+                                <option value="">Seleccione</option>
+                                <option value="unaPagina">Una Página</option>
+                                <option value="multiPagina">Multipágina</option>
+                            </select>
+                        </div>
+
+                        <!-- One page -->
+                        <div class="mb-3" id="onePageOptions" style="display: none;">
+                            <label>Cantidad de secciones:</label>
+                            <input type="number" min="1" max="4" id="sectionCount" class="form-control">
+                            <label>¿Desea un formulario de contacto?</label>
+                            <select id="contactFormOnePage" class="form-select">
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+
+                        <!-- Multipage -->
+                        <div class="mb-3" id="multiPageOptions" style="display: none;">
+                            <label>Cantidad de páginas:</label>
+                            <select id="pageCount" class="form-select">
+                                <option value="1-3">De 1 a 3</option>
+                                <option value="4-7">De 4 a 7</option>
+                                <option value="8-10">De 8 a 10</option>
+                            </select>
+                            <label>¿Necesita blog?</label>
+                            <select id="needsBlog" class="form-select">
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                            <label>¿Necesita galería de imágenes?</label>
+                            <select id="imageGallery" class="form-select">
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                            <label>¿Necesita un formulario de contacto?</label>
+                            <select id="contactFormMultiPage" class="form-select">
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+
+                        <div class="custom-button-group">
+                            <button type="button" class="btn-custom" onclick="previousCustomStep()">Anterior</button>
+                            <button type="button" class="btn-custom" onclick="nextCustomStep()">Siguiente</button>
+                        </div>
+                    </div>
+
+                    <!-- Step 3 -->
+                    <div class="form-step" id="step-3">
+                        <h4>Detalles Finales</h4>
+                        <div class="mb-3">
+                            <label>¿Cuenta con diseño?</label>
+                            <select id="hasDesign" class="form-select">
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label>¿Desea que el sitio sea autoadministrable?</label>
+                            <select id="selfManage" class="form-select">
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label>¿Necesita capacitación para el sitio web?</label>
+                            <select id="needsTraining" class="form-select">
+                                <option value="si">Sí</option>
+                                <option value="no">No</option>
+                            </select>
+                        </div>
+                        <div class="mb-3">
+                            <label>Breve descripción del proyecto:</label>
+                            <textarea id="projectDescription" rows="4" class="form-control"></textarea>
+                        </div>
+                        <div class="custom-button-group">
+                            <button type="button" class="btn-custom" onclick="previousCustomStep()">Anterior</button>
+                            <button type="button" class="btn btn-warning" onclick="submitCustomForm()">Cotizar</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <!-- Map -->
+            <div class="col-lg-6 mb-3 mb-lg-0">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d7753.607810199068!2d-89.25134747582257!3d13.669684727267224!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses!2ssv!4v1726799555559!5m2!1ses!2ssv"
+                    width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- button up -->
+    <div>
+        <button id="back-to-top" class="btn btn-primary">↑ Subir</button>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer bg-dark text-white py-4 mt-5">
+        <div class="container text-center">
+            <p class="mb-1">&copy; 2024 NexusTech. All Rights Reserved.</p>
+
+            <p class="mb-0">Follow us on:</p>
+            <ul class="list-inline">
+                <li class="list-inline-item">
+                    <a href="#" class="text-white">Facebook</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" class="text-white">Twitter</a>
+                </li>
+                <li class="list-inline-item">
+                    <a href="#" class="text-white">LinkedIn</a>
+                </li>
+            </ul>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+    
+</body>
+</html>
